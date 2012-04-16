@@ -1,0 +1,25 @@
+IR-LED is connected between PIN 3 (PWM) and GND.
+This Arduino Software receives the pulse/space information from Serial Port and Controls the IR-LED.
+Tested with Arduino UNO 
+
+Send the pulse/space duration (in micro-sec) as decimal-coded Commas seperated array enclosed with square braces.
+Comm Port Baud Rate : 9600 bps
+
+Example, 
+To Send a IR wave as, 
+Pulse 4500(uSec), Space 4500 (usec), Pulse 600(usec) Space 800(usec)
+
+Send the Following String over Serial Comm.Port
+
+"[4500,4500,600,800]"
+
+As soon as the Arduino receives the "]" character, it starts sending the pulse over IR.
+
+To Verify what data received by Arduino, Issue "?" command over Serial.
+
+
+
+
+
+
+
