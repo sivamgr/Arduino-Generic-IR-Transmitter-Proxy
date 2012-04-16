@@ -19,7 +19,8 @@
 ***
 *** FILE NAME : GenericIRTransmitterProxy.ino
 ***
-*** DESCRIPTION : Implementation of J1939 Stack.
+*** DESCRIPTION : Receives Pulse/Space Duration from Serial Port and Controls the
+***               IR transmitter connected to PIN 3 and GND
 ***
 *** COMPILER : avr-gcc
 ***
@@ -42,7 +43,7 @@
 
 #define TIMER_PWM_PIN       3 
 #define TIMER_ENABLE_PWM    (TCCR2A |= _BV(COM2B1))
-#define TIMER_DISABLE_PWM   (TCCR2A &= ~(_BV(COM2B1)))
+#define TIMER_DISABLE_PWM   (TCCR2A &= ~(_BV(COM2B1)))			  
 #define TIMER_ENABLE_INTR   (TIMSK2 = _BV(OCIE2A))
 #define TIMER_DISABLE_INTR  (TIMSK2 - 0)
 #define SYSCLOCK 			16000000 
