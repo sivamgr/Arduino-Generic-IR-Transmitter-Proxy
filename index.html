@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Arduino-generic-ir-transmitter-proxy by sivamgr</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Arduino-generic-ir-transmitter-proxy</h1>
+        <p>Arduino, Recevies Pulse/Space Duration through Serial Port and Controls the IR Transmitter Connected between PIN 3 (PWM) and GND</p>
+        <p class="view"><a href="https://github.com/sivamgr/Arduino-Generic-IR-Transmitter-Proxy">View the Project on GitHub <small>sivamgr/Arduino-Generic-IR-Transmitter-Proxy</small></a></p>
+        <ul>
+          <li><a href="https://github.com/sivamgr/Arduino-Generic-IR-Transmitter-Proxy/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sivamgr/Arduino-Generic-IR-Transmitter-Proxy/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sivamgr/Arduino-Generic-IR-Transmitter-Proxy">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>IR-LED is connected between PIN 3 (PWM) and GND.
+This Arduino Software receives the pulse/space information from Serial Port and Controls the IR-LED.
+Tested with Arduino UNO </p>
+
+<p>Send the pulse/space duration (in micro-sec) as decimal-coded Commas seperated array enclosed with square braces.
+Comm Port Baud Rate : 9600 bps</p>
+
+<p>Example, 
+To Send a IR wave as, 
+Pulse 4500(uSec), Space 4500 (usec), Pulse 600(usec) Space 800(usec)</p>
+
+<p>Send the Following String over Serial Comm.Port</p>
+
+<p>"[4500,4500,600,800]"</p>
+
+<p>As soon as the Arduino receives the "]" character, it starts sending the pulse over IR.</p>
+
+<p>To Verify what data received by Arduino, Issue "?" command over Serial.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/sivamgr">sivamgr</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
